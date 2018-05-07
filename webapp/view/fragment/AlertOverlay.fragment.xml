@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Popover showHeader="false" contentWidth="420px" contentHeight="500px" placement="Bottom">
+		<NavContainer id="navCon">
+			<Page id="master" title="Notifications">
+				<List id="list" items="{/NotificationCollection}">
+					<StandardListItem title="{Head}" description="{Fecha}" type="Active" press="onNavToProduct" iconDensityAware="false" iconInset="false"/>
+				</List>
+			</Page>
+			<Page id="detail" showNavButton="true" navButtonPress="onNavBack" title="Notifications">
+				<ObjectHeader title="{Head}" icon="{ProductPicUrl}" iconDensityAware="false">
+					<attributes>
+						<ObjectAttribute text="{Subhead}"/>
+						<ObjectAttribute text="{Content}"/>
+					</attributes>
+				</ObjectHeader>
+			</Page>
+		</NavContainer>
+	</Popover>
+</core:FragmentDefinition>
